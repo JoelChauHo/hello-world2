@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HTML5</title>
+<meta charset="utf-8">
+<style>
+
+<!-- /* universal specificity */ --> 
+
+*{ color: yellow;
+}
+<!-- /* element specificity */ --> 
+h1 {
+  color: green;
+}
+
+<!-- /* class specificity */ -->
+.class {
+  color: blue;
+}
+
+<!-- /* multiple class specificity */ -->
+.class.sibling-class {
+  color: red;
+}
+
+<!-- /* ID specificity */ -->
+#id {
+  color: purple;
+}
+
+<!-- /* !important specificity is the heaviest weight, be careful when using it! */ 
+!important syntax right behind property and value
+-->
+
+.important3 {
+    color: dodgerblue ;
+}
+
+.important2 {
+  color: green !important ;
+}
+
+h1:last-child {
+  color: orange;
+}
+
+<!-- /* The pseudo selector is more specific than our class */ -->
+.cant-overwrite {
+  color: gray;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>I'm a universal element</h2>
+
+<h1>I'm a h1 element</h1>
+
+<h1 class="class">I'm a h1 with a class, .class</h1>
+
+<h1 class="class sibling-class">I'm an h1 with multiple classes, .class sibling-class</h1>
+
+<h1 id="id">I'm an h1 with an ID #id</h1>
+
+<!-- inline styles will overwrite classes and IDs in an external file -->
+<h1 style="color: pink;">I'm an h1 with an inline style</h1>
+
+<h1 class="important2" style="color: teal;">I'm an h1 with important being used right after property & value</h1>
+<h1 class="important2" >I'm an h1 with important being used right after property & value</h1>
+
+<h1 class="cant-overwrite">Pseudo class found here!</h1>
+
+</body>
+
+</html>
